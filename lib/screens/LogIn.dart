@@ -34,21 +34,9 @@ class _LogInState extends State<LogIn> {
                   children: [
 
                     ArcBackground(),
-                    Container(
-                      width: 150.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0xffFFF2EE),
-                      ),
-                      child: Stack(
-                        children: [
-                          Image.asset("img/logoo.png"),
-                          Image.asset("img/Fresh.png"),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20.0),
+                    Image.asset("img/logoo.png"),
+
+                    SizedBox(height: 10.0),
                     Text("LogIn",style: TextStyle(
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold
@@ -59,7 +47,6 @@ class _LogInState extends State<LogIn> {
                         width: MediaQuery.of(context).size.width,
                         child: TextField(
                           controller: _email,
-                          obscureText: true,
                           keyboardType: TextInputType.visiblePassword,
                           decoration: InputDecoration(
                             hintText: "Email",
