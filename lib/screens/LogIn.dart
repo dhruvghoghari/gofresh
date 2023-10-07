@@ -34,7 +34,7 @@ class _LogInState extends State<LogIn> {
                   children: [
 
                     ArcBackground(),
-                    Image.asset("img/logoo.png"),
+                    // Image.asset("img/logoo.png"),
 
                     SizedBox(height: 10.0),
                     Text("LogIn",style: TextStyle(
@@ -47,7 +47,7 @@ class _LogInState extends State<LogIn> {
                         width: MediaQuery.of(context).size.width,
                         child: TextField(
                           controller: _email,
-                          keyboardType: TextInputType.visiblePassword,
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             hintText: "Email",
                             filled: true,
@@ -91,11 +91,10 @@ class _LogInState extends State<LogIn> {
                         ),
                       ),
                     ),
-                    Align(alignment: Alignment.topRight,
-                      child: Text("Forget Password?",style: TextStyle(
-                        color: Color(0xffFE7551)
-                      ),),
-                    ),
+                    SizedBox(width: 200.0),
+                    Text("Forget Password?",style: TextStyle(
+                      color: Color(0xffFE7551)
+                    ),),
                     SizedBox(height: 10.0),
                     Container(
                       height: 50.0,
