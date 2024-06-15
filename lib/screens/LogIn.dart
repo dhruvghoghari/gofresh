@@ -3,7 +3,6 @@ import 'package:gofresh/screens/HomeScreen.dart';
 import 'package:gofresh/screens/MainScreen.dart';
 import 'package:gofresh/screens/Profile.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../utility/ArcBackground.dart';
 
 class LogIn extends StatefulWidget {

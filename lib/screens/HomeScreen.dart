@@ -362,16 +362,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Text("₹125",
-                                    style: TextStyle(
+                                  child: Text("₹125", style: TextStyle(
                                       color: Color(0xff010101),
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.w900,
                                     ),
                                   ),
                                 ),
-                                Text("₹200",
-                                  style: TextStyle(
+                                Text("₹200", style: TextStyle(
                                     color: Color(0xffC0C0C0),
                                     fontSize: 10.0,
                                   ),

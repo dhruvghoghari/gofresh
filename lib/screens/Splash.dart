@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gofresh/screens/IntroScreen.dart';
 import 'package:gofresh/screens/LogIn.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'MainScreen.dart';
@@ -14,6 +15,9 @@ class _SplashState extends State<Splash> {
 
   checkdata() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+      // Navigator.push(context,
+      //   MaterialPageRoute(builder: (context) => IntroScreen()),
+      // );
     if (prefs.containsKey("IsLogin")) {
       Navigator.pop(context);
       Navigator.push(context,
@@ -22,14 +26,22 @@ class _SplashState extends State<Splash> {
     }
     else
     {
-      Navigator.pop(context);
-      Navigator.push(context,
-        MaterialPageRoute(builder: (context) => LogIn()),
-      );
+      if(prefs.containsKey("isfirst"))
+        {
+          Navigator.pop(context);
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => LogIn()),
+          );
+        }
+      else
+        {
+          Navigator.pop(context);
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => IntroScreen()),
+          );
+        }
     }
   }
-
-
 
   @override
   void initState() {

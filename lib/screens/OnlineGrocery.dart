@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class OnlineGrocery extends StatefulWidget {
-  const OnlineGrocery({Key? key}) : super(key: key);
 
   @override
   State<OnlineGrocery> createState() => _OnlineGroceryState();
